@@ -12,9 +12,9 @@ differences are:
 * implements a test to ensure the FFI bindings match the native library's interface
 * runs CI tests on Windows (AppVeyor), OS X and Linux (Travis)
 
-|Crate|Documentation|Linux/OS X|Windows|Issues|
+|Crate|Documentation|Linux/macOS|Windows|Issues|
 |:---:|:-----------:|:--------:|:-----:|:----:|
-|[![](http://meritbadge.herokuapp.com/rust_sodium)](https://crates.io/crates/rust_sodium)|[![Documentation](https://docs.rs/rust_sodium/badge.svg)](https://docs.rs/rust_sodium)|[![Build Status](https://travis-ci.org/maidsafe/rust_sodium.svg?branch=master)](https://travis-ci.org/maidsafe/rust_sodium)|[![Build status](https://ci.appveyor.com/api/projects/status/kkgtqnx263xgk0c3/branch/master?svg=true)](https://ci.appveyor.com/project/MaidSafe-QA/rust-sodium/branch/master)|[![Stories in Ready](https://badge.waffle.io/maidsafe/rust_sodium.png?label=ready&title=Ready)](https://waffle.io/maidsafe/rust_sodium)|
+|[![](http://meritbadge.herokuapp.com/rust_sodium)](https://crates.io/crates/rust_sodium)|[![Documentation](https://docs.rs/rust_sodium/badge.svg)](https://docs.rs/rust_sodium)|[![Build Status](https://travis-ci.com/maidsafe/rust_sodium.svg?branch=master)](https://travis-ci.com/maidsafe/rust_sodium)|[![Build status](https://ci.appveyor.com/api/projects/status/kkgtqnx263xgk0c3/branch/master?svg=true)](https://ci.appveyor.com/project/MaidSafe-QA/rust-sodium/branch/master)|[![Stories in Ready](https://badge.waffle.io/maidsafe/rust_sodium.png?label=ready&title=Ready)](https://waffle.io/maidsafe/rust_sodium)|
 
 | [MaidSafe website](https://maidsafe.net) | [SAFE Dev Forum](https://forum.safedev.org) | [SAFE Network Forum](https://safenetforum.org) |
 |:----------------------------------------:|:-------------------------------------------:|:----------------------------------------------:|
@@ -32,8 +32,8 @@ RUST_SODIUM_DISABLE_PIE=1 cargo build
 
 If you already have a copy of libsodium, you can choose to link this rather than having rust_sodium
 download and build libsodium for you.  You should ensure that it is the same version as is specified
-in `VERSION` of [our build.rs]
-(https://github.com/maidsafe/rust_sodium/blob/master/rust_sodium-sys/build.rs) file.
+in `VERSION` of
+[our build.rs](https://github.com/maidsafe/rust_sodium/blob/master/rust_sodium-sys/build.rs) file.
 
 Set an environment variable `RUST_SODIUM_LIB_DIR` to the folder where libsodium exists.  A static
 version of libsodium will be preferred unless you also set `RUST_SODIUM_SHARED` to any value.
@@ -85,12 +85,7 @@ generally a shared version of libsodium will be used.
 
 ## License
 
-Licensed under either of
-
-* Apache License, Version 2.0, ([LICENSE-APACHE](LICENSE-APACHE) or http://www.apache.org/licenses/LICENSE-2.0)
-* MIT License ([LICENSE-MIT](LICENSE-MIT) or http://opensource.org/licenses/MIT)
-
-at your option.
+This SAFE Network library is dual-licensed under the Modified BSD ([LICENSE-BSD](LICENSE-BSD) https://opensource.org/licenses/BSD-3-Clause) or the MIT license ([LICENSE-MIT](LICENSE-MIT) https://opensource.org/licenses/MIT) at your option.
 
 ### Contribution
 

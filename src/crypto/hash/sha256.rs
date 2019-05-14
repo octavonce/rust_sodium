@@ -1,3 +1,12 @@
+// Copyright 2018 MaidSafe.net limited.
+//
+// This SAFE Network Software is licensed to you under the MIT license <LICENSE-MIT
+// http://opensource.org/licenses/MIT> or the Modified BSD license <LICENSE-BSD
+// https://opensource.org/licenses/BSD-3-Clause>, at your option. This file may not be copied,
+// modified, or distributed except according to those terms. Please review the Licences for the
+// specific language governing permissions and limitations relating to use of the SAFE Network
+// Software.
+
 //! `SHA-256`.
 //!
 //! There has been considerable degradation of public confidence in the
@@ -26,7 +35,7 @@ mod test {
     use super::*;
 
     #[test]
-    #[cfg_attr(rustfmt, rustfmt_skip)]
+    #[rustfmt::skip]
     fn test_vector_1() {
         // hash of empty string
         unwrap!(crate::init());
@@ -39,7 +48,7 @@ mod test {
     }
 
     #[test]
-    #[cfg_attr(rustfmt, rustfmt_skip)]
+    #[rustfmt::skip]
     fn test_vector_2() {
         // The quick brown fox jumps over the lazy dog
         unwrap!(crate::init());
@@ -95,7 +104,7 @@ mod test {
     }
 
     #[test]
-    #[cfg_attr(rustfmt, rustfmt_skip)]
+    #[rustfmt::skip]
     fn test_hash_state_empty() {
         // hash of empty string
         unwrap!(crate::init());
@@ -108,7 +117,7 @@ mod test {
     }
 
     #[test]
-    #[cfg_attr(rustfmt, rustfmt_skip)]
+    #[rustfmt::skip]
     fn test_hash_state_multi_parts() {
         // The quick brown fox jumps over the lazy dog
         unwrap!(crate::init());

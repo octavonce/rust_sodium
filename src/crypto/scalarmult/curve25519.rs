@@ -1,3 +1,12 @@
+// Copyright 2018 MaidSafe.net limited.
+//
+// This SAFE Network Software is licensed to you under the MIT license <LICENSE-MIT
+// http://opensource.org/licenses/MIT> or the Modified BSD license <LICENSE-BSD
+// https://opensource.org/licenses/BSD-3-Clause>, at your option. This file may not be copied,
+// modified, or distributed except according to those terms. Please review the Licences for the
+// specific language governing permissions and limitations relating to use of the SAFE Network
+// Software.
+
 //! `crypto_scalarmult_curve25519` specified in
 //! [Cryptography in `NaCl`](http://nacl.cr.yp.to/valid.html), Sections 2, 3, and 4.
 //! This function is conjectured to be strong. For background see Bernstein,
@@ -57,7 +66,7 @@ mod test {
     use crate::randombytes::randombytes_into;
 
     #[test]
-    #[cfg_attr(rustfmt, rustfmt_skip)]
+    #[rustfmt::skip]
     fn test_vector_1() {
         // corresponding to tests/scalarmult.c and tests/scalarmult3.cpp from NaCl
         unwrap!(crate::init());
@@ -72,7 +81,7 @@ mod test {
     }
 
     #[test]
-    #[cfg_attr(rustfmt, rustfmt_skip)]
+    #[rustfmt::skip]
     fn test_vector_2() {
         // corresponding to tests/scalarmult2.c and tests/scalarmult4.cpp from NaCl
         unwrap!(crate::init());
@@ -87,7 +96,7 @@ mod test {
     }
 
     #[test]
-    #[cfg_attr(rustfmt, rustfmt_skip)]
+    #[rustfmt::skip]
     fn test_vector_3() {
         // corresponding to tests/scalarmult5.c and tests/scalarmult7.cpp from NaCl
         unwrap!(crate::init());
@@ -106,7 +115,7 @@ mod test {
     }
 
     #[test]
-    #[cfg_attr(rustfmt, rustfmt_skip)]
+    #[rustfmt::skip]
     fn test_vector_4() {
         // corresponding to tests/scalarmult6.c from NaCl
         unwrap!(crate::init());

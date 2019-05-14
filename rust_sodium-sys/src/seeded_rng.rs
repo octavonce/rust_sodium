@@ -1,10 +1,21 @@
+// Copyright 2018 MaidSafe.net limited.
+//
+// This SAFE Network Software is licensed to you under the MIT license <LICENSE-MIT
+// http://opensource.org/licenses/MIT> or the Modified BSD license <LICENSE-BSD
+// https://opensource.org/licenses/BSD-3-Clause>, at your option. This file may not be copied,
+// modified, or distributed except according to those terms. Please review the Licences for the
+// specific language governing permissions and limitations relating to use of the SAFE Network
+// Software.
+
 use super::{randombytes_implementation, randombytes_set_implementation, sodium_init};
+use lazy_static::lazy_static;
 use libc;
 use rand::{self, Rng, SeedableRng, XorShiftRng};
 use std::cell::RefCell;
 use std::ffi::CString;
 use std::rc::Rc;
 use std::sync::Mutex;
+use unwrap::unwrap;
 
 lazy_static! {
     static ref INIT_RESULT: Mutex<Option<i32>> = Mutex::new(None);
@@ -129,7 +140,7 @@ mod tests {
     };
 
     #[test]
-    #[cfg_attr(rustfmt, rustfmt_skip)]
+    #[rustfmt::skip]
     fn seeded_init_with_rng() {
         use std::thread::Builder;
         let mut rng = XorShiftRng::from_seed([0, 1, 2, 3]);
