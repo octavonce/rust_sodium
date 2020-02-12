@@ -73,15 +73,12 @@
     mutable_transmutes,
     no_mangle_const_items,
     unknown_crate_types,
-    warnings
 )]
 #![deny(
-    deprecated,
     improper_ctypes,
     missing_docs,
     non_shorthand_field_patterns,
     overflowing_literals,
-    plugin_as_library,
     stable_features,
     unconditional_recursion,
     unknown_lints,
